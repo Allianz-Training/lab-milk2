@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "day4lab1": {
+    "day4lab3": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/day4lab1",
+            "outputPath": "dist/day4lab3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "day4lab1:build"
+            "browserTarget": "day4lab3:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "day4lab1:build:production"
+              "browserTarget": "day4lab3:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "day4lab1:build"
+            "browserTarget": "day4lab3:build"
           }
         },
         "test": {
@@ -109,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "day4lab1:serve"
+            "devServerTarget": "day4lab3:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "day4lab1:serve:production"
+              "devServerTarget": "day4lab3:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "day4lab1"
+  "defaultProject": "day4lab3"
 }
