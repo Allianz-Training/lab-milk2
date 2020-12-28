@@ -1,0 +1,39 @@
+<div id="nav1">
+  <img src="../../assets/NUNU_INSURANCE1.png" width="150px" height="140px">
+</div>
+
+<div id="nav2">
+  <span class="info"><i><b>Tel : </b>081-234-5678</i></span>
+  <span class="info"><i><b>Email : </b> nunuinsurance@hotmail.com</i></span>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a id="navtext1" class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a id="navtext" class="nav-link" [routerLink]="['/ourproduct']">OUR PRODUCTS</a>
+          </li>
+          <li class="nav-item">
+            <a id="navtext" class="nav-link" [routerLink]="['/about']">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a id="navtext" class="nav-link" [routerLink]="['/contactus']">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a id="navtext" class="nav-link" [routerLink]="['/login']"><i>LOGIN</i></a>
+          </li>
+          <li class="nav-item">
+            <button id="navtext2" type="button" class="btn btn-outline-warning" [routerLink]="['/login']" >BUY OUR PRODUCT</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+

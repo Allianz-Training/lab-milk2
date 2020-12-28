@@ -1,0 +1,29 @@
+#header{
+    color: #525252;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#header1{
+    color: #525252;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+#submitbutton{
+    text-align: center;
+    color: #525252;
+    margin-bottom: 40px;
+}
+form{
+    margin-bottom: 60px;
+}
+
+.mb-3{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.sexselected{
+    margin-bottom: 50px;
+}
+

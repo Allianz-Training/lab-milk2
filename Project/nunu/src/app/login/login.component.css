@@ -1,0 +1,36 @@
+#header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #525252;
+}
+#register1{
+    margin-top: 40px;
+    margin-left: 190px;   
+}
+.mb-3{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.btn {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+form{
+    margin-bottom: 60px;
+}
+
+a{
+    color: #807878;
+    /* text-decoration: none; */
+}
+
+a:hover{
+    color: #f1bb08;
+    text-decoration: underline;
+    cursor: pointer;
+}

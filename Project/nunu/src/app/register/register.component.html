@@ -1,0 +1,105 @@
+<app-navbar2></app-navbar2>
+
+<div id="header"><h1>Register</h1></div>
+
+<form class="container" [formGroup]="registerForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <span style="color: red;" *ngIf="registerForm.get('email').errors">*</span>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      formControlName="email"
+      >
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <span style="color: red;" *ngIf="registerForm.get('password').errors">*</span>
+      <input type="password" class="form-control" id="exampleInputPassword1"
+      formControlName="password"
+      >
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+  </form>
+
+  <div id="header1"><h3>Personal details</h3></div>
+
+  <form class="container" [formGroup]="registerForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">First name</label>
+      <span style="color: red;" *ngIf="registerForm.get('firstName').errors">*</span>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="firstName">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Last name</label>
+      <span style="color: red;" *ngIf="registerForm.get('lastName').errors">*</span>
+      <input class="form-control" id="exampleInputPassword1" 
+      formControlName="lastName"
+      >
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Address</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Phone number</label>
+        <span style="color: red;" *ngIf="registerForm.get('phone').errors">*</span>
+        <input class="form-control" id="exampleInputPassword1" formControlName="phone">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Sex</label>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Other</option>
+          </select>
+    </div>
+  </form>
+
+<div id="header1"><h3>Pet details</h3></div>
+
+<form class="container" [formGroup]="registerForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <span style="color: red;" *ngIf="registerForm.get('petName').errors">*</span>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="petName">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Ages (in month)</label>
+      <span style="color: red;" *ngIf="registerForm.get('petAge').errors">*</span>
+      <input class="form-control" id="exampleInputPassword1" formControlName="petAge">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Type of your pet (Ex. Dog, Cat etc.)</label>
+      <span style="color: red;" *ngIf="registerForm.get('type').errors">*</span>
+      <input class="form-control" id="exampleInputPassword1" formControlName="type">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Breed</label>
+        <span style="color: red;" *ngIf="registerForm.get('breed').errors">*</span>
+        <input class="form-control" id="exampleInputPassword1" formControlName="breed">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Sex</label>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select>
+    </div>
+</form>
+
+<div id="submitbutton">
+    <button type="button" class="btn btn-warning" (click)="submit1()">Submit   
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        </svg>
+    </button>
+</div>
+
+<app-bottompage></app-bottompage>
+
+
+
+  

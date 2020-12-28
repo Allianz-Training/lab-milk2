@@ -1,0 +1,18 @@
+#below{
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: #525252;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #f1bb08;
+}
+p{
+    font-size: small;
+}
+.row{
+    margin-bottom: 20px;
+}

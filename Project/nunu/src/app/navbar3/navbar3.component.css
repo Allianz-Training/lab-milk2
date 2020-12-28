@@ -1,0 +1,19 @@
+#nav1{
+    background-color: white ;
+    text-align: center;
+}
+#nav2{
+    text-align: right;
+    color: #545454;
+    padding-bottom: 5px;
+}
+.nav-item{
+    padding-left: 1100px;
+}
+.info{
+    padding-right:40px;
+}
+.bg-dark {
+    background-color: #525252!important;
+    color:#525252;
+}
