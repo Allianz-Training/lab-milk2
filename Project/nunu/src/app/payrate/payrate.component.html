@@ -1,0 +1,63 @@
+<app-navbar3></app-navbar3>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" (click)="credit()">Credit/Debit Card</a></li>
+      <li class="page-item"><a class="page-link" (click)="qrCode()">QR Code</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="row" >
+      <div class="col">
+        <div>
+          <h2 id="headPay">Payment method</h2>
+        </div>
+        <form *ngIf="showCredit" id="creditSeg" [formGroup]="paymentForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name on card</label>
+              <span style="color: red;" *ngIf="paymentForm.get('nameoncard').errors">*</span>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="nameoncard">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Card number</label>
+              <span style="color: red;" *ngIf="paymentForm.get('cardnumber').errors">*</span>
+              <input class="form-control" id="exampleInputPassword1" formControlName="cardnumber">
+            </div>
+            <div class="mb-3">
+              <div class="row">
+                <label for="exampleInputPassword1" class="form-label">Date expired (MM/YYYY)</label>
+                <span style="color: red;" *ngIf="paymentForm.get('mmexpired').errors || paymentForm.get('yyexpired').errors"  >*</span>
+                <span class="col-4"><input class="form-control" id="month" placeholder="MM" formControlName="mmexpired"></span>
+                <span class="col-4"><input class="form-control" id="year" placeholder="YYYY" formControlName="yyexpired"></span>
+              </div>
+
+              <span class="col-4">
+                <label for="exampleInputPassword1" class="form-label" id="cvvLabel">CVV</label>
+                <span style="color: red;" *ngIf="paymentForm.get('cvv').errors">*</span>
+                <input class="form-control" id="exampleInputPassword1" id="cvv" placeholder="CVV" formControlName="cvv">
+              </span>
+            </div>
+
+            <button type="submit" class="btn btn-warning" id="butCredit" [routerLink]="['/paymentconfirm']">Submit</button>
+
+        </form>
+        <div *ngIf="showQR">
+          <img id="qrimg" src="https://i1.wp.com/devbanban.com/wp-content/uploads/2018/04/devbanbanqrcode.png?w=300&ssl=1">
+          <div class="card" id="nameUser">
+            <div class="card-body">
+              <p><b>Name :</b> Emma Violet</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col">
+        <app-invoice></app-invoice>
+      </div>
+    </div>
+</div>
+
+<app-bottompage></app-bottompage>
+
+

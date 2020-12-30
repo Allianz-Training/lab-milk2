@@ -21,7 +21,9 @@ export class RegisterComponent implements OnInit {
       petName: ["",Validators.required],
       petAge: ["", Validators.required],
       breed: ["", Validators.required],
-      type: ["", Validators.required]
+      type: ["", Validators.required],
+      IDcard: ["", Validators.required],
+      gender: ["", Validators.required]
     })
   }
 

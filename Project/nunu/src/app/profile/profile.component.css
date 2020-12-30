@@ -1,0 +1,21 @@
+#img1{
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    border: 2px solid #525252;
+}
+.userName{
+    padding-left: 60px;
+    font-weight: bolder;
+    font-size: 30px;
+    color: #525252;
+}
+.shadow{
+    width: 1200px;
+    margin-top: 30px;
+    margin-left: 35px;
+    border-radius: 30px !important;
+    /* background-color: #b6b0b0 !important; */
+
+}

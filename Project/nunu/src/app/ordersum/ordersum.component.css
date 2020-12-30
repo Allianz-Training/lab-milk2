@@ -1,0 +1,41 @@
+#border1{
+    border-radius: 30px;
+    height: 500px;
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+#first{
+    padding-top: 40px;
+}
+h2{
+    text-align: center;
+    color: #525252;
+}
+
+hr{
+    color: rgb(241, 190, 50);
+}
+.total{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: right;
+    color: #525252;
+}
+.row{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    color: #525252;
+}
+#checkout{
+    margin-left: 140px;
+    margin-top: 20px;
+}
+#textbut{
+    padding-left: 30%;
+    padding-right: 30%;
+}
+#line1{
+    color: black;
+}

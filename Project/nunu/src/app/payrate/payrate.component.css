@@ -1,0 +1,52 @@
+.pagination{
+    margin-top: 30px;
+    margin-left: 40%;
+    margin-bottom: 30px;
+}
+.page-link{
+    color: #525252;
+}
+.card{
+    margin-bottom: 30px;
+    height: 70px;
+    width: 400px;
+    
+}
+.card-body{
+    text-align: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+#creditSeg{
+    margin-right: 10px;
+}
+#month{
+    width: 150px;
+}
+#year{
+    width: 150px;
+}
+#cvv{
+    width: 150px;
+    margin-bottom: 20px;
+}
+#cvvLabel{
+    padding-top: 20px;
+}
+#butCredit{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+#qrimg{
+    margin-left: 20%;
+   
+}
+#headPay{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #525252;
+}
+#nameUser{
+    margin-left: 10%;
+}

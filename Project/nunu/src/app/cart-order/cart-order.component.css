@@ -1,0 +1,35 @@
+h2{
+    color: #525252;
+    text-align: center;
+}
+#img1{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#head1{
+    font-weight: bolder;
+    font-size: 20px;
+    color: #525252;
+}
+#head2{
+    font-size: 15px;
+    font-weight: bold;
+}
+#price{
+    color: #525252;
+}
+#buymore{
+    margin-bottom: 50px;
+    margin-left: 40%;
+}
+#delete{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+label{
+    color: #525252;
+}
+.row{
+    margin-bottom: 30px;
+}
+

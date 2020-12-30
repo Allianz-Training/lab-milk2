@@ -1,0 +1,39 @@
+#headtext{
+    color: #525252;
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+#bodyText1{
+    padding-left: 30px;
+    padding-bottom: 1px;
+    text-align: left;
+    font-style: italic;  
+    line-height: 10px;  
+}
+.bodyText{
+    padding-left: 30px;
+    text-align: left;
+    font-style: italic;
+    text-align: justify;
+    line-height: 10px;
+}
+.shadow{
+    width: 1000px;
+    border-radius: 50px;
+    margin-left: 10%;
+}
+.progress{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+#progress1{
+    margin-bottom: 30px;
+}
+
+.lead{
+    padding-left: 60px;
+    padding-top: 10px;
+}
