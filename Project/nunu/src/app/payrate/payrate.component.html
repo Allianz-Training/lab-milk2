@@ -39,7 +39,7 @@
               </span>
             </div>
 
-            <button type="submit" class="btn btn-warning" id="butCredit" [routerLink]="['/paymentconfirm']">Submit</button>
+            <button type="submit" class="btn btn-warning" id="butCredit" (click)="submit()">Submit</button>
 
         </form>
         <div *ngIf="showQR">
@@ -49,6 +49,7 @@
               <p><b>Name :</b> Emma Violet</p>
             </div>
           </div>
+          <button type="submit" class="btn btn-warning" id="butQr" [routerLink]="['/paymentconfirm']">Submit</button>
         </div>
         
       </div>

@@ -38,6 +38,11 @@ html{
     margin-top: 10px;
     margin-bottom: 50px;
 }
+#butQr{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 220px;
+}
 #qrimg{
     margin-left: 20%;
    

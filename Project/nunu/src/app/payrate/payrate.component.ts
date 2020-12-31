@@ -36,5 +36,12 @@ export class PayrateComponent implements OnInit {
     this.showQR = false
     this.showCredit = true
   }
+  submit(): void {
+    if(this.paymentForm.invalid) {
+      alert("Please fill form")
+    } else {
+      this.router.navigate(['/paymentconfirm']);
+    }
+  }
 
 }
