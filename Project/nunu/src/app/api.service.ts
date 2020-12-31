@@ -10,6 +10,14 @@ export class ApiService {
   public getApi() {
     return this.api.get('https://swapi.dev/api/people/')
   }
+
+  public get(path: string, headers?: any) {
+    return this.api.get(`http://localhost:8080/${path}`, {headers})
+  }
+
+  public post(path: string, body: any) {
+    return this.api.post(`http://localhost:8080/${path}`, body)
+  }
 }
 
 
