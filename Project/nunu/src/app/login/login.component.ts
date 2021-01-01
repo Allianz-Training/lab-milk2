@@ -30,10 +30,10 @@ export class LoginComponent implements OnInit {
       this.api.post("users/login", this.form.value).subscribe(data => {
           this.user.setUserData(data)
           this.router.navigate(['/profile']);
-      }, error => {
-        console.log(error)
-      })
+        }, error => {
+          console.log(error)
+        })
+      }
     }
-  }
 
 }

@@ -8,6 +8,7 @@ describe('BuytologinComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [],
       declarations: [ BuytologinComponent ]
     })
     .compileComponents();
