@@ -95,11 +95,11 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody *ngFor="let y of yyy">
+            <tbody *ngFor="let y of yyy; let i = index">
             <tr>
-                <th scope="row">{{y.name}}</th>
+                <th scope="row">{{i+1}}</th>
                 <td>{{y.mass}}</td>
-                <td>Boh</td>
+                <td>{{y.name}}</td>
                 <td>10000</td>
                 <td>10000</td>
                 <td>12/12/19</td>

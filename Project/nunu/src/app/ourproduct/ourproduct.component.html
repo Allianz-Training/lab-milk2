@@ -6,19 +6,20 @@
 <div>
     <div class="container">
         <div class="row">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
+          <div class="col" *ngFor="let product of products">
+            <div class="card" style="width: 18rem;" >
                 <img src="https://media1.popsugar-assets.com/files/thumbor/oS9FzsU0rUgKJDJDOJckBgq5U4o/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/08/29/847/n/24155406/ba3cec068d2133cf_nirzar-pangarkar-217994-unsplash/i/Look-those-baby-blues.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Cat insurance</h5>
                   <p class="card-text">
-                    The NUNU Insurance plan covers your cat from nose to tail. It pays on your actual veterinary bill and covers new accidents and illnesses, emergencies, genetic conditions and much more.
+                    {{ product.description }}
+                    <!-- The NUNU Insurance plan covers your cat from nose to tail. It pays on your actual veterinary bill and covers new accidents and illnesses, emergencies, genetic conditions and much more. -->
                   </p>
-                  <a href="#" class="btn btn-warning" [routerLink]="['/buytologin']">Buy now</a>
+                  <a href="#" class="btn btn-warning" [routerLink]="['/buytologin']" (click)="buy(product.id)">Buy now</a>
                 </div>
               </div>
           </div>
-          <div class="col">
+          <!-- <div class="col">
             <div class="card" style="width: 18rem;">
                 <img src="https://i.pinimg.com/originals/69/20/2e/69202ef85831b9238666ec4c5411472e.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -37,7 +38,7 @@
                   <a href="#" class="btn btn-warning" [routerLink]="['/buytologin']">Buy now</a>
                 </div>
               </div>
-          </div>
+          </div> -->
         </div>
       </div>
 </div>

@@ -2,13 +2,13 @@
 
 <div class="shadow p-3 mb-5 bg-white rounded">
   <span><img id="img1" src="../../assets/user.jpg" width="120px" height="123px"></span>
-  <span class="userName">Emma Violet</span>
+  <span class="userName">{{ user.firstname }} {{ user.lastname }}</span>
 </div>
 
 
-<app-personaldetail></app-personaldetail>
+<app-personaldetail [name]="user.firstname + ' ' + user.lastname" [email]="user.email" [citizenId]="user.citizenId"></app-personaldetail>
  
-<app-petdetail></app-petdetail>
+<app-petdetail [pets]="user.pets"></app-petdetail>
 
 <app-bottompage></app-bottompage>
   

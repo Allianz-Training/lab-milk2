@@ -10,30 +10,17 @@
             <th scope="col">Pet name</th>
             <th scope="col">Package</th>
             <th scope="col">Date</th>
-            <th scope="col">Time</th>
+            <th scope="col">Price</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Package1</td>
-            <td>12/12/2020</td>
-            <td>12:00:00</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Package2</td>
-            <td>12/12/2020</td>
-            <td>12:00:00</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td >Larry the Bird</td>
-            <td>Package2</td>
-            <td>12/12/2020</td>
-            <td>12:00:00</td>
+        <tr *ngFor="let purchase of purchased; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>  purchase.pet.name   </td>
+            <!-- <td> {{ purchase.pet.name }} </td> -->
+            <td> {{ purchase.productDetails.name }} </td>
+            <td> {{ purchase.purchaseDate.slice(0,10) }} </td>
+            <td> {{ purchase.productDetails.price }} </td>
         </tr>
         </tbody>
     </table>

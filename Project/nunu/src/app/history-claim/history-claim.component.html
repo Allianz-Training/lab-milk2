@@ -15,7 +15,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
+        <tr *ngFor="let claimss of claims; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{ claimss.pet.name }}</td>
+            <td>{{ claimss.date.slice(0,10) }}</td>
+            <td>{{ claimss.amount }}</td>
+            <td>{{ claimss.type }}</td>
+            <td>{{ claimss.status }}</td>
+        </tr>
+        <!-- <tr>
             <th scope="row">1</th>
             <td>Mark</td>
             <td>12/12/2020</td>
@@ -38,7 +46,7 @@
             <td>1000</td>
             <td>Accident</td>
             <td>Done</td>
-        </tr>
+        </tr> -->
         </tbody>
     </table>
 </div>
