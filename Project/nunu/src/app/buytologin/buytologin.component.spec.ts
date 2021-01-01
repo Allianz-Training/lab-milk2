@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { BuytologinComponent } from './buytologin.component';
 
@@ -8,7 +10,7 @@ describe('BuytologinComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [],
+      imports: [FormsModule,ReactiveFormsModule,RouterTestingModule],
       declarations: [ BuytologinComponent ]
     })
     .compileComponents();
