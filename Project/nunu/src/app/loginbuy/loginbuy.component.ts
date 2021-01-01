@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-loginbuy',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginbuyComponent implements OnInit {
 
-  constructor() { }
+  products: any
+  constructor(private api : ApiService, private userService: UserService) { 
+    this.products = [];
+  }
 
   ngOnInit(): void {
+    this.api.get('products/get').subscribe(res => {
+      this.products = res
+    })
   }
 
 }

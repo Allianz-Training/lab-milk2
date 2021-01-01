@@ -6,6 +6,9 @@
 .page-link{
     color: #525252;
 }
+.page-item:hover{
+    cursor: pointer;
+}
 .card{
     margin-bottom: 30px;
     height: 70px;
