@@ -6,7 +6,7 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
       <span style="color: red;" *ngIf="registerForm.get('email').errors">*</span>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+      <input type="email" class="form-control" aria-describedby="emailHelp" 
       formControlName="email"
       >
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
@@ -14,13 +14,11 @@
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
       <span style="color: red;" *ngIf="registerForm.get('password').errors">*</span>
-      <input type="password" class="form-control" id="exampleInputPassword1"
-      formControlName="password"
-      >
+      <input type="password" class="form-control"formControlName="password">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Confirm password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" class="form-control">
       </div>
   </form>
 
@@ -30,30 +28,28 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">First name</label>
       <span style="color: red;" *ngIf="registerForm.get('firstName').errors">*</span>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="firstName">
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="firstName">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Last name</label>
       <span style="color: red;" *ngIf="registerForm.get('lastName').errors">*</span>
-      <input class="form-control" id="exampleInputPassword1" 
-      formControlName="lastName"
-      >
+      <input class="form-control"  formControlName="lastName">
     </div>
 
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Identification card number</label>
       <span style="color: red;" *ngIf="registerForm.get('IDcard').errors">*</span>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="IDcard">
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="IDcard">
     </div>
 
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Address</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input class="form-control" formControlName="address">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Phone number</label>
         <span style="color: red;" *ngIf="registerForm.get('phone').errors">*</span>
-        <input class="form-control" id="exampleInputPassword1" formControlName="phone">
+        <input class="form-control" formControlName="phone">
     </div>
   </form>
 
@@ -63,12 +59,12 @@
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Name</label>
       <span style="color: red;" *ngIf="registerForm.get('petName').errors">*</span>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="petName">
+      <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="petName">
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Ages (in month)</label>
       <span style="color: red;" *ngIf="registerForm.get('petAge').errors">*</span>
-      <input class="form-control" id="exampleInputPassword1" formControlName="petAge">
+      <input class="form-control" formControlName="petAge">
     </div>
 
     <div class="mb-3">
@@ -88,9 +84,9 @@
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Gender</label>
         <span style="color: red;" *ngIf="registerForm.get('gender').errors">*</span>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option value="1">Male</option>
-            <option value="2">Female</option>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="gender">
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
         </select>
     </div>
 </form>
