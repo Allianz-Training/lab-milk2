@@ -18,7 +18,8 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Confirm password</label>
-        <input type="password" class="form-control">
+        <span style="color: red;" *ngIf="registerForm.get('confirmpassword').errors">*</span>
+        <input type="password" class="form-control" formControlName="confirmpassword">
       </div>
   </form>
 

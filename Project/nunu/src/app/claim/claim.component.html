@@ -1,0 +1,41 @@
+<app-navbar3></app-navbar3>
+
+<div>
+    <h1>Claim</h1>
+</div>
+
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Pet's name</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Product's name</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Type of your claim</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">OPD</option>
+          <option value="2">Accident</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Amount (Baht) </label>
+        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+    </div>
+    <button type="submit" class="btn btn-warning" [routerLink]="['/thank']" >Submit</button>
+  </form>
+
+<app-bottompage></app-bottompage>

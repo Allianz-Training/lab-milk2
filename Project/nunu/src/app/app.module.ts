@@ -33,6 +33,8 @@ import { FaqComponent } from './faq/faq.component';
 import { ConfirmcancelComponent } from './confirmcancel/confirmcancel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BuytologinComponent } from './buytologin/buytologin.component';
+import { ClaimComponent } from './claim/claim.component';
+import { ThankComponent } from './thank/thank.component';
 
 
 @NgModule({
@@ -65,7 +67,9 @@ import { BuytologinComponent } from './buytologin/buytologin.component';
     PaymentconfirmComponent,
     FaqComponent,
     ConfirmcancelComponent,
-    BuytologinComponent
+    BuytologinComponent,
+    ClaimComponent,
+    ThankComponent
     
   ],
   imports: [

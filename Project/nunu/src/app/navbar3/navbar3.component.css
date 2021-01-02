@@ -15,11 +15,14 @@
     padding-right: 60px;
 }
 #navtext2{
-    margin-right: 40px;
+    margin-right: 20px;
     
 }
 #drop{
     padding-left: 40px;
+}
+#claimbutton{
+    margin-right: 20px;
 }
 button{
     text-align: center;

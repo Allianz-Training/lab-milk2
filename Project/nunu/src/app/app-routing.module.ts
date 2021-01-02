@@ -18,6 +18,8 @@ import { PaymentconfirmComponent } from './paymentconfirm/paymentconfirm.compone
 import { FaqComponent } from './faq/faq.component';
 import { ConfirmcancelComponent } from './confirmcancel/confirmcancel.component';
 import { BuytologinComponent } from './buytologin/buytologin.component';
+import { ClaimComponent } from './claim/claim.component';
+import { ThankComponent } from './thank/thank.component';
 
 const routes: Routes = [{
   path: '',
@@ -53,7 +55,11 @@ const routes: Routes = [{
 },{path: 'confirmcancel',
   component: ConfirmcancelComponent
 },{path: 'buytologin',
-  component: BuytologinComponent}
+  component: BuytologinComponent
+},{path: 'claim',
+  component: ClaimComponent
+},{path: 'thank',
+  component: ThankComponent}
 ];
 
 @NgModule({

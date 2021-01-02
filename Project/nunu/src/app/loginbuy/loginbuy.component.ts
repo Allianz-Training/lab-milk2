@@ -10,6 +10,10 @@ import { UserService } from '../user.service';
 export class LoginbuyComponent implements OnInit {
 
   products: any
+  productcart: string[] = []
+ 
+
+
   constructor(private api : ApiService, private userService: UserService) { 
     this.products = [];
   }
@@ -19,5 +23,11 @@ export class LoginbuyComponent implements OnInit {
       this.products = res
     })
   }
+  addcart(a): void {
+    console.log(a)
+    this.productcart.push(a)
+  }
+
+
 
 }
