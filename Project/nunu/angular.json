@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "nunu"
+  "defaultProject": "nunu",
+  "cli": {
+    "analytics": false
+  }
 }

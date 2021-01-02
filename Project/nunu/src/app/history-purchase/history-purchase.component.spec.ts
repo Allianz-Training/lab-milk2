@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HistoryPurchaseComponent } from './history-purchase.component';
@@ -8,6 +9,7 @@ describe('HistoryPurchaseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[HttpClientModule],
       declarations: [ HistoryPurchaseComponent ]
     })
     .compileComponents();
