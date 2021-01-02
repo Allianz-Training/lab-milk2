@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ordersum.component.css']
 })
 export class OrdersumComponent implements OnInit {
+  products: []
+  total: number
 
-  constructor() { }
+  constructor() { 
+    this.products = []
+  }
 
   ngOnInit(): void {
+    this.products = history.state.data
+   
   }
 
 }

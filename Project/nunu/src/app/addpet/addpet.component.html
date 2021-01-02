@@ -1,0 +1,55 @@
+<div class="shadow p-3 mb-5 bg-white">
+    <h4 id="headtext">
+        Add pet
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+    </h4>
+    <div>
+        <form class="container" [formGroup]="registerForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <span style="color: red;" *ngIf="registerForm.get('petName').errors">*</span>
+              <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="petName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Ages (in month)</label>
+              <span style="color: red;" *ngIf="registerForm.get('petAge').errors">*</span>
+              <input class="form-control" formControlName="petAge">
+            </div>
+        
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Type of your pet</label>
+              <span style="color: red;" *ngIf="registerForm.get('type').errors">*</span>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="type">
+                  <option value="1">Dog</option>
+                  <option value="2">Cat</option>
+              </select>
+            </div>
+        
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Breed</label>
+                <span style="color: red;" *ngIf="registerForm.get('breed').errors">*</span>
+                <input class="form-control" id="exampleInputPassword1" formControlName="breed">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Gender</label>
+                <span style="color: red;" *ngIf="registerForm.get('gender').errors">*</span>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" formControlName="gender">
+                    <option value="MALE">Male</option>
+                    <option value="FEMALE">Female</option>
+                </select>
+            </div>
+        </form>
+
+        <button type="button" class="btn btn-warning">
+            Add pet
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+        </button>
+
+    </div>
+</div>

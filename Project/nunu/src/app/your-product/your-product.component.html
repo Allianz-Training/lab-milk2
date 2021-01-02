@@ -97,13 +97,13 @@
             </thead>
             <tbody *ngFor="let product of products; let i = index">
             <tr>
-                <!-- <th scope="row">{{i+1}}</th>
-                <td>{{product.mass}}</td>
-                <td>{{product.name}}</td>
-                <td>10000</td>
-                <td>10000</td>
-                <td>12/12/19</td>
-                <td>12/12/20</td> -->
+                <th scope="row">{{i+1}}</th>
+                <td>{{product.productDetails.name}}</td>
+                <td>{{product.petName}}</td>
+                <td> {{ product.productDetails.opd }} </td>
+                <td> {{ product.productDetails.accident }} </td>
+                <td> {{ product.purchaseDate.slice(0,10) }} </td>
+                <td> {{ product.expDate.slice(0,10) }} </td>
                 <td>
                     <button type="button" class="btn btn-danger" (click)="submitcancel()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">

@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 export class LoginbuyComponent implements OnInit {
 
   products: any
-  productcart: string[] = []
+  productcart = []
  
 
 
@@ -23,7 +23,7 @@ export class LoginbuyComponent implements OnInit {
       this.products = res
     })
   }
-  addcart(a): void {
+  addcart(a: Object): void {
     console.log(a)
     this.productcart.push(a)
   }

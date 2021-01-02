@@ -68,7 +68,7 @@
         <div *ngFor="let b of this.productcart">
           {{ b.name }}
         </div>
-        <button type="button" class="btn btn-warning" id="checkbut" [routerLink]="['/cart', productcart]">CHECKOUT</button>
+        <button type="button" class="btn btn-warning" id="checkbut" [routerLink]="['/cart']" [state]="{data: productcart}">CHECKOUT</button>
         
       </div>
     </div>

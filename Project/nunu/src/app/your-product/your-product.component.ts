@@ -24,8 +24,7 @@ export class YourProductComponent implements OnInit {
       'Accept': 'application/json',
       'Authorization': `Bearer ${this.userService.getToken()}`
     }
-    this.api.get(`history/${this.userService.getUser().id}/purchase`, headers ).subscribe(res => this.products = res , error => console.log(error));
-    this.products = this.products.filter(p => Date.now() < p.expDate);
+    this.api.get(`users/${this.userService.getUser().id}/products`, headers ).subscribe(res => this.products = res , error => console.log(error));
   }
 
 

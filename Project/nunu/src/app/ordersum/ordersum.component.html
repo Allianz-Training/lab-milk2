@@ -6,43 +6,34 @@
 <div id="border1" class="shadow bg-white ">
     <div class="row">
         <div class="col" id="first">
-            <p>
-                Cat insurance 
-            </p>
+            <h5>
+                Product name
+            </h5>
         </div>
         <div class="col" id="first">
+            <h5>
+                Product price
+            </h5>
+        </div>
+    <div class="row" *ngFor="let product of products">
+        <div class="col" >
             <p>
-                x 1
+                {{ product.name }} 
             </p>
         </div>
-        <div class="col" id="first">
+        <div class="col" >
             <p>
-                1200 Baht/month
+                {{ product.price }}
             </p>
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col">
-            <p>
-                Cat insurance 
-            </p>
-        </div>
-        <div class="col">
-            <p>
-                x 1
-            </p>
-        </div>
-        <div class="col">
-            <p>
-                1200 Baht/month
-            </p>
-        </div>
-      </div>
+      
 
       <hr>
-      <div class="total">
-        <p><b>Total :</b> 2400 Baht/month</p>
+      <div class="total" >
+        <p><b>Total :</b> <span *ngFor="let product of products">{{product.price}}</span> </p>
       </div>
       
 </div>
@@ -50,4 +41,6 @@
 <div id="checkout">
     <button type="button" class="btn btn-warning" id="textbut" [routerLink]="['/payrate']">Checkout</button>
 </div>
+
+
 
