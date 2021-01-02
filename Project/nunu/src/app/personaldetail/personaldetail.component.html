@@ -4,16 +4,19 @@
     </h4>
     <div>
         <p class="bodyText">
-            <b>Name : </b>{{ name }}
+            <b>Name : </b>{{ user.firstname }} {{user.lastname}}
         </p>
         <p class="bodyText">
-            <b>Email :</b> {{ email }}
+            <b>Email :</b> {{ user.email }}
         </p>
         <p class="bodyText">
-            <b>CitizenId :</b> {{ citizenId.slice(0,9) }}xxxx
+            <b>CitizenId :</b> {{ user.citizenId.slice(0,9) }}xxxx
         </p>
-        <!-- <p id="bodyText1">
-            <b>Phone :</b> 0812345678
-        </p> -->
+        <p class="bodyText">
+            <b>CitizenId :</b> {{ user.address }}
+        </p>
+        <p id="bodyText1">
+            <b>Phone :</b> {{user.phone}}
+        </p>
     </div>
 </div>

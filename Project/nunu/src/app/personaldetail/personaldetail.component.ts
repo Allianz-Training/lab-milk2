@@ -7,10 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PersonaldetailComponent implements OnInit {
 
-  @Input() name: string
-  @Input() email: string
-  @Input() citizenId: string
-
+  @Input() user: any
+  
   constructor() { }
 
   ngOnInit(): void {

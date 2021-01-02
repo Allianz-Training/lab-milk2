@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // api//
 import { ApiService } from 'src/app/api.service';
+import { UserService } from '../user.service';
 //
 
 @Component({
@@ -10,27 +11,29 @@ import { ApiService } from 'src/app/api.service';
   styleUrls: ['./your-product.component.css']
 })
 export class YourProductComponent implements OnInit {
-  yyy: any
 
-
-  //api//
-  constructor(private router: Router, private api : ApiService) { 
-  //
+  products: any
+  
+  constructor(private router: Router, private api : ApiService, private userService: UserService) { 
+    this.products = []
   } 
 
   ngOnInit(): void {
-    this.api.getApi().subscribe(xxx => {
-      this.yyy = xxx["results"] ;
-      console.log(this.yyy);
-    })
+    const headers = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': `Bearer ${this.userService.getToken()}`
+    }
+    this.api.get(`history/${this.userService.getUser().id}/purchase`, headers ).subscribe(res => this.products = res , error => console.log(error));
+    this.products = this.products.filter(p => Date.now() < p.expDate);
   }
 
 
 
 
   submitcancel(): void {
-    var r = confirm("Are you sure to cancel this product?");
-    if (r==true) {
+    const isConfirm = confirm("Are you sure to cancel this product?");
+    if (isConfirm) {
       this.router.navigate(['/confirmcancel']);
     }
     else {

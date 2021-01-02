@@ -13,7 +13,7 @@ export class HistoryPurchaseComponent implements OnInit {
 
   purchased: any
 
-  constructor(private api: ApiService, private userService: UserService, private api1: HttpClient) { 
+  constructor(private api: ApiService, private userService: UserService) { 
     this.purchased = []
   }
 

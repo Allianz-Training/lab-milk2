@@ -95,15 +95,15 @@
                 <th scope="col"></th>
             </tr>
             </thead>
-            <tbody *ngFor="let y of yyy; let i = index">
+            <tbody *ngFor="let product of products; let i = index">
             <tr>
-                <th scope="row">{{i+1}}</th>
-                <td>{{y.mass}}</td>
-                <td>{{y.name}}</td>
+                <!-- <th scope="row">{{i+1}}</th>
+                <td>{{product.mass}}</td>
+                <td>{{product.name}}</td>
                 <td>10000</td>
                 <td>10000</td>
                 <td>12/12/19</td>
-                <td>12/12/20</td>
+                <td>12/12/20</td> -->
                 <td>
                     <button type="button" class="btn btn-danger" (click)="submitcancel()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -116,24 +116,6 @@
             </tbody>
         </table>
 
-<!-- <table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Mass</th>
-        </tr>
-    </thead>
-    <div *ngFor="let y of yyy">
-        <tbody>
-            <tr>
-                <th scope="row">{{y.name}}</th>
-                <td>{{y.mass}}</td>
-        </tbody>
-    </div>
-</table> -->
-
-
-    
 </div>
 
 
