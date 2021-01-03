@@ -4,33 +4,33 @@
     <h1>Claim</h1>
 </div>
 
-<form>
+<form [formGroup]="form">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Pet's name</label>
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" formControlName="petId" (change)="onChange()">
         <option selected>Open this select menu</option>
-        <option *ngFor="let petname of petnames" value="{{ petname.id }}" >{{petname.name}}</option>
+        <option *ngFor="let pet of pets" value="{{ pet.id }}" >{{pet.name}}</option>
       </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Product's name</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" formControlName="budgetId">
           <option selected>Open this select menu</option>
-          <option *ngFor="let product of products" value="{{product.productDetails.id}}" >{{product.productDetails.name}}</option>
+          <option *ngFor="let budget of products" value="{{budget.id}}" >{{budget.product.name}}</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Type of your claim</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" formControlName="claimType">
           <option value="OPD" selected>OPD</option>
           <option value="ACCIDENT">Accident</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Amount (Baht) </label>
-        <input class="form-control" type="text" aria-label="default input example">
+        <input class="form-control" type="text" aria-label="default input example" formControlName="amount">
     </div>
-    <button type="submit" class="btn btn-warning" [routerLink]="['/thank']" >Submit</button>
+    <button type="submit" class="btn btn-warning" (click)="submit()" >Submit</button>
   </form>
 
 <app-bottompage></app-bottompage>

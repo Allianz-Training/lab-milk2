@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
           this.user.setUserData(data)
           this.router.navigate([this.page]);
         }, error => {
-          console.log(error)
+          alert('username or password is wrong')
         })
       }
     }

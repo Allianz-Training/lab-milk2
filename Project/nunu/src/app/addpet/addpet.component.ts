@@ -18,12 +18,10 @@ export class AddpetComponent implements OnInit {
       type: ["DOG", Validators.required],
       breed: ["", Validators.required],
       gender: ["MALE", Validators.required]
-    }
-    )
+    })
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   submit(): void {
     const headers = {
@@ -32,11 +30,12 @@ export class AddpetComponent implements OnInit {
       'Authorization': `Bearer ${this.userService.getToken()}`
     }
     const { petName, petAge } = this.petForm.value
-    this.api.post(`users/${this.userService.getUser().id}/pet`, {...this.petForm.value, name: petName, age: petAge } , headers).subscribe(res => {
-      
-      this.userService.getUser().pets.push(res)
-      alert('Success')
-    } , error => alert(error))
+    if(!this.petForm.invalid) {
+      this.api.post(`users/${this.userService.getUser().id}/pet`, {...this.petForm.value, name: petName, age: petAge } , headers).subscribe(res => {
+        this.userService.getUser().pets.push(res)
+        alert('Success')
+      } , error => alert(error))
+    } else alert('Please fill form')
   }
 
 }

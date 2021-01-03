@@ -37,3 +37,8 @@
     padding-left: 60px;
     padding-top: 10px;
 }
+
+.pet {
+    margin-bottom: 2rem;
+    border-bottom: #525252 solid 1px;
+}
