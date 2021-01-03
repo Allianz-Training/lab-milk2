@@ -8,9 +8,16 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', async () => {
+  it('should display OurProduct Button', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('nunu app is running!');
+    expect(await page.getOurProductButton().getText()).toEqual('OUR PRODUCTS');
+  });
+
+
+  it('navigate to Login', async () => {
+    await page.navigateTo();
+    page.getLoginButton().click();
+    expect(browser.getCurrentUrl()).toBe(page.navigateToLogin());
   });
 
   afterEach(async () => {
