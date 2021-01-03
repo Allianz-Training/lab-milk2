@@ -1,5 +1,6 @@
 import { componentFactoryName } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { browser } from 'protractor';
 import { LoginPage } from './login.po';
 
 describe('Login test',()=>{
@@ -10,18 +11,23 @@ describe('Login test',()=>{
         page.navigateTo();
     })
 
-    it('Login with button',() =>{
+    it('Login with submitbutton',() =>{
         page.getEmailTextBox().sendKeys('user1@email.com');
         page.getPasswordTextBox().sendKeys('1234');
         page.getLoginButton().click();
     })
 
-    it('form invalid when empty',()=>{
-        page.getEmailTextBox().invalid;
-        page.getPasswordTextBox().invalid;
-        expect(
-        
+    it('It should redirect user to Profile page', ()=>{
+        page.getLoginButton().click()
+        expect(browser.getCurrentUrl()).toBe(page.navigateToProfile())
+    });
 
+    it('Redirect user to Home when logout', ()=>{
+        page.getLogoutButton().click()
+        expect(browser.getCurrentUrl()).toBe(browser.get('/profile'))
+    });
 
-    })
+    // xit('form invalid when empty',()=>{
+    
+    // });
 })

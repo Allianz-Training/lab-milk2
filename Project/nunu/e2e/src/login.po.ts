@@ -6,6 +6,10 @@ export class LoginPage {
         return browser.get('/login');
     }
 
+    navigateToProfile(){
+        return browser.get('/profile')
+    }
+
     getEmailTextBox(){
         return element(by.name('email'));
     }
@@ -17,5 +21,10 @@ export class LoginPage {
     getLoginButton(){
         return element(by.buttonText('LOGIN'))
     }
+    getLogoutButton(){
+        return element(by.className('btn btn-outline-warning'))
+    }
+
+
     
 }

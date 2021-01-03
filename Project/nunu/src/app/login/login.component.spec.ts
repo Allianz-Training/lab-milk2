@@ -24,38 +24,38 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('form invalid when empty', () => {
-    expect(component.form.valid).toBeFalsy();
-  });
+  // it('form invalid when empty', () => {
+  //   expect(component.form.valid).toBeFalsy();
+  // });
 
-  it('email field validity', () => {
-    let errors = {};
-    let email = component.form.controls['email'];
-    expect(email.valid).toBeFalsy();
+  // it('email field validity', () => {
+  //   let errors = {};
+  //   let email = component.form.controls['email'];
+  //   expect(email.valid).toBeFalsy();
 
-    // Set email to something correct
-    email.setValue("test@example.com");
-    errors = email.errors || {};
-    expect(errors['required']).toBeFalsy();
-    expect(errors['pattern']).toBeFalsy();
-  });
+  //   // Set email to something correct
+  //   email.setValue("test@example.com");
+  //   errors = email.errors || {};
+  //   expect(errors['required']).toBeFalsy();
+  //   expect(errors['pattern']).toBeFalsy();
+  // });
 
-  it('Password field validity', () => {
-    let password = component.form.controls['password'];
-    expect(password.valid).toBeFalsy();
-    //required password
-     let errors = password.errors || {};
-     expect(errors['required']).toBeFalsy;
-  });
+  // it('Password field validity', () => {
+  //   let password = component.form.controls['password'];
+  //   expect(password.valid).toBeFalsy();
+  //   //required password
+  //    let errors = password.errors || {};
+  //    expect(errors['required']).toBeFalsy;
+  // });
   
 
-  // it('submitting a form', () => {
-  //   expect(component.form.valid).toBeFalsy();
-  //   component.form.controls['email'].setValue("user@email.com");
-  //   component.form.controls['password'].setValue("1234");
-  //   expect(component.form.valid).toBeTruthy();
-  //   component.submit();
-  // });
+  // // it('submitting a form', () => {
+  // //   expect(component.form.valid).toBeFalsy();
+  // //   component.form.controls['email'].setValue("user@email.com");
+  // //   component.form.controls['password'].setValue("1234");
+  // //   expect(component.form.valid).toBeTruthy();
+  // //   component.submit();
+  // // });
 
   it('should create', () => {
     expect(component).toBeTruthy();
