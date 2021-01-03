@@ -27,6 +27,7 @@ export class PayrateComponent implements OnInit {
     }
 
   ngOnInit(): void {
+    console.log('payrate ',history.state.data)
   }
 
   qrCode(): void {
@@ -48,7 +49,10 @@ export class PayrateComponent implements OnInit {
     if(this.paymentForm.invalid) {
       alert("Please fill form")
     } else {
-      this.api.post(`users/${this.userService.getUser().id}/buy`, {cart}, headers).subscribe(res => this.router.navigate(['/paymentconfirm']), err => alert('Error') )
+      this.api.post(`users/${this.userService.getUser().id}/buy`, {cart}, headers).subscribe(res => {
+        this.userService.setUser(res)
+        this.router.navigate(['/paymentconfirm'])
+      }, err => alert('Error') )
       
     }
   }

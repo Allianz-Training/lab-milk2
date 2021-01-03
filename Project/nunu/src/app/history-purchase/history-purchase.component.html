@@ -16,8 +16,7 @@
         <tbody>
         <tr *ngFor="let purchase of purchased; let i = index">
             <th scope="row">{{i+1}}</th>
-            <td>  purchase.pet.name   </td>
-            <!-- <td> {{ purchase.pet.name }} </td> -->
+            <td> {{ purchase.pet.name }} </td>
             <td> {{ purchase.productDetails.name }} </td>
             <td> {{ purchase.purchaseDate.slice(0,10) }} </td>
             <td> {{ purchase.productDetails.price }} </td>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
@@ -15,20 +15,18 @@ export class CartOrderComponent implements OnInit {
   products
   petname: any
   form: FormGroup
-  @Input()
-  productcart
 
   constructor(private api : ApiService, private userService: UserService, private fb: FormBuilder, private router: Router, private cart: CartService) {
     this.products = []
     this.petname = []
     this.form = fb.group({
-      petId: ['']
+      petId: ['Select pet']
     })
   }
 
   ngOnInit(): void {
     this.products = history.state.data
-
+    console.log("cart-order ",this.products)
     const headers = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
@@ -38,9 +36,8 @@ export class CartOrderComponent implements OnInit {
   }
 
   submit() {
-    const productcart = this.productcart
     this.cart.getCart().push({ productId: this.products[0].id, petId: this.form.get('petId').value })
-    this.router.navigate(['/payrate'], {state: productcart })
+    this.router.navigate(['/payrate'], { state: { data: this.products } })
   }
   
 }

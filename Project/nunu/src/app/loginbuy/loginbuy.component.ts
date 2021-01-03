@@ -12,8 +12,6 @@ export class LoginbuyComponent implements OnInit {
   products: any
   productcart = []
  
-
-
   constructor(private api : ApiService, private userService: UserService) { 
     this.products = [];
   }
@@ -24,14 +22,11 @@ export class LoginbuyComponent implements OnInit {
     })
   }
   addcart(a: Object): void {
-    console.log(a)
     this.productcart.push(a)
   }
 
   delete(index: number): void {
     this.productcart.splice(index, 1);
   }
-
-
 
 }

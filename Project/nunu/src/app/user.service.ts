@@ -22,6 +22,10 @@ export class UserService {
     return this.user 
   }
 
+  public setUser(user) {
+    this.user = user
+  }
+
   public getToken(): string { 
     return this.token 
   }
