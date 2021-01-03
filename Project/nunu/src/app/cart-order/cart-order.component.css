@@ -3,7 +3,7 @@ h2{
     text-align: center;
 }
 #img1{
-    margin-left: 150px;
+    margin-left: 160px;
     margin-bottom: 20px;
 }
 #head1{
@@ -33,12 +33,18 @@ label{
 }
 .row{
     margin-bottom: 30px;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 .inf{
     margin-left: 20px;
 }
 select{
     margin-bottom: 20px;
+}
+#checkout{
+    margin-left: 500px;
+    margin-bottom: 30px;
 }
 
 

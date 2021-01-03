@@ -19,8 +19,4 @@ export class InvoiceComponent implements OnInit {
     this.total = tmp.reduce((a , b) => a + b)
   }
 
-  submit(): void {
-    
-  }
-
 }

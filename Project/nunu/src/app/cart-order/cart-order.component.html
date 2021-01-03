@@ -1,9 +1,7 @@
-<h2>Order</h2>
-<hr>
 
 <div class="container">
     <div class="row">
-      <div class="shadow p-3 mb-5 bg-white rounded" *ngFor="let product of products">
+      <div class="shadow p-3 bg-white rounded" *ngFor="let product of products">
         <img id="img1" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lionel-animals-to-follow-on-instagram-1568319926.jpg?crop=0.922xw:0.738xh;0.0555xw,0.142xh&resize=640:*" width="130px" height="140px" class="img-thumbnail" alt="...">
         <p id="head1" class="inf"> {{ product.name }} </p>
         <label id="head2" class="inf">Price :</label>
@@ -11,21 +9,24 @@
         <label id="head2" class="inf">Pet name :</label>
         <div>
           <form [formGroup]="form">
-            <select class="form-select">
-              <option *ngFor="let pname of petname; let i = index" (select)="choose(pname.id, i)" selected>{{pname.name}}</option>
+            <select class="form-select" formControlName="petId">
+              <option selected> Select pet </option>
+              <option *ngFor="let pname of petname; let i = index" value="{{pname.id}}">{{pname.name}}</option>
             </select>
           </form>
         </div >
     </div>
-    
-    <hr>
 </div>
   
 
-<button id="buymore" type="button" class="btn btn-warning" [routerLink]="['/loginbuy']">
+<!-- <button id="buymore" type="button" class="btn btn-warning" [routerLink]="['/loginbuy']">
     Clear and Back to our product
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
       <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
     </svg>
-</button>
+</button> -->
+
+<div id="checkout">
+  <button type="button" class="btn btn-warning" id="textbut" (click)="submit()">Checkout</button>
+</div>

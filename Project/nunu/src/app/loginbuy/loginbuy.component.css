@@ -6,7 +6,7 @@ h2{
 }
 .card{
     margin-bottom: 50px;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 }
 #addbut{
     margin-left: 60px;
@@ -33,4 +33,7 @@ h6{
 }
 #productname{
     padding-left: 30px;
+}
+h5{
+    text-align: center;
 }
