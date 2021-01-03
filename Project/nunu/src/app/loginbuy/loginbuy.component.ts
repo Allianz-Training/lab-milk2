@@ -28,6 +28,10 @@ export class LoginbuyComponent implements OnInit {
     this.productcart.push(a)
   }
 
+  delete(index: number): void {
+    this.productcart.splice(index, 1);
+  }
+
 
 
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
 import { UserService } from '../user.service';
 
@@ -11,10 +12,13 @@ import { UserService } from '../user.service';
 export class CartOrderComponent implements OnInit {
   products: [] 
   petname: any
-
-  constructor(private api : ApiService, private userService: UserService) {
+  form: FormGroup
+  constructor(private api : ApiService, private userService: UserService, private fb: FormBuilder) {
     this.products = []
     this.petname = []
+    this.form = fb.group({
+      petId: ['']
+    })
   }
 
   ngOnInit(): void {
@@ -28,15 +32,10 @@ export class CartOrderComponent implements OnInit {
     this.api.get(`users/${this.userService.getUser().id}/pet`, headers ).subscribe(res => this.petname = res , error => console.log(error));
   }
 
-  delete(): void {
-
+  choose(petId: string, index: number): void {
+    console.log(index + " " +  petId)
   }
-
-
-    // this.products = history.state.data
-    // console.log(history.state)
-    // console.log(this.productcart)
-    // console.log(this.router.getCurrentNavigation().extras.state)
-  }
+  
+}
 
 

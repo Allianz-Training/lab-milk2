@@ -10,6 +10,7 @@ h2{
 }
 #addbut{
     margin-left: 60px;
+    margin-bottom: 10px;
 }
 #checkbut{
     margin-left: 190px;
@@ -25,4 +26,11 @@ h6{
 }
 #checkout{
     margin-left: 180px !important;
+}
+#delete{
+    margin-left: 320px;
+    margin-top: 10px;
+}
+#productname{
+    padding-left: 30px;
 }

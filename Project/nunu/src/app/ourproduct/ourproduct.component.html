@@ -14,7 +14,7 @@
                   <p class="card-text">
                     {{ product.description }}
                   </p>
-                  <a href="#" class="btn btn-warning" [routerLink]="['/buytologin']" (click)="buy(product.id)">Buy now</a>
+                  <a href="#" class="btn btn-warning" [routerLink]="['/login']" [state]="{ page: '/loginbuy' }" >Buy now</a>
                 </div>
               </div>
           </div>

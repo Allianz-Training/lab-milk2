@@ -25,6 +25,11 @@ export class UserService {
   public getToken(): string { 
     return this.token 
   }
+
+  public logout(): void {
+    this.user = {}
+    this.token = ""
+  }
 }
 
 

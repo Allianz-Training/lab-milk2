@@ -20,7 +20,7 @@ h2{
 }
 #buymore{
     margin-bottom: 50px;
-    margin-left: 40%;
+    margin-left: 70px;
 }
 #delete{
     margin-top: 20px;
@@ -36,6 +36,9 @@ label{
 }
 .inf{
     margin-left: 20px;
+}
+select{
+    margin-bottom: 20px;
 }
 
 
