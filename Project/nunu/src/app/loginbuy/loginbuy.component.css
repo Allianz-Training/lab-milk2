@@ -6,10 +6,11 @@ h2{
 }
 .card{
     margin-bottom: 50px;
-    margin-left: 200px;
+    /* margin-left: 200px; */
 }
 #addbut{
     margin-left: 60px;
+    margin-bottom: 10px;
 }
 #checkbut{
     margin-left: 190px;
@@ -25,4 +26,14 @@ h6{
 }
 #checkout{
     margin-left: 180px !important;
+}
+#delete{
+    margin-left: 320px;
+    margin-top: 10px;
+}
+#productname{
+    padding-left: 30px;
+}
+h5{
+    text-align: center;
 }

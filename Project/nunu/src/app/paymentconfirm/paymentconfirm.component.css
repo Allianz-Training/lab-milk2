@@ -1,6 +1,6 @@
 #border1{
     border-radius: 30px;
-    height: 400px;
+    height: 200px;
     width: 500px;
     margin-left: 30%;
     margin-top: 20px;
@@ -10,7 +10,7 @@
     padding-top: 40px;
 }
 #thk{
-    color: red;
+    color: #525252;
 }
 h2{
     text-align: center;
@@ -19,7 +19,7 @@ h2{
     margin-bottom: 30px;
 }
 h5{
-    color: red;
+    color: #525252;
 }
 hr{
     color: rgb(241, 190, 50);
@@ -31,7 +31,8 @@ button{
 .total{
     margin-left: 20px;
     margin-right: 20px;
-    text-align: right;
+    padding-top: 60px;
+    text-align: center;
     color: #525252;
 }
 .row{

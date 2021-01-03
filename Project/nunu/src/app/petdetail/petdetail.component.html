@@ -30,15 +30,15 @@
                     OPD
                 </p>
                 <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar" style="@Html: Raw('width:' + item.usedBudget.opd * 100 / item.product.opd + '%;')" 
-                    aria-valuenow="item.usedBudget.opd * 100 / item.product.opd" aria-valuemin="0" aria-valuemax="100">{{item.usedBudget.opd * 100 / item.product.opd}}%</div>
+                    <div class="progress-bar bg-warning" [style.width.%]="item.usedBudget.opd * 100 / item.product.opd" role="progressbar"
+                    aria-valuenow="{{item.usedBudget.opd * 100 / item.product.opd}}" aria-valuemin="0" aria-valuemax="100">{{item.usedBudget.opd }} / {{item.product.opd}}</div>
                 </div>
                 <p class="lead">
                     Accident
                 </p>
                 <div class="progress" id="progress1">
-                    <div class="progress-bar bg-warning" role="progressbar" style="@Html: Raw('width:' + item.usedBudget.accident * 100 / item.product.accident + '%;')"
-                    aria-valuenow="item.usedBudget.accident * 100 / item.product.accident" aria-valuemin="0" aria-valuemax="100">{{item.usedBudget.accident * 100 / item.product.accident}}%</div>
+                    <div class="progress-bar" [style.width.%]="item.usedBudget.accident * 100 / item.product.accident"  role="progressbar"
+                    aria-valuenow="{{item.usedBudget.accident * 100 / item.product.accident}}" aria-valuemin="0" aria-valuemax="100">{{item.usedBudget.accident }} / {{item.product.accident}}</div>
                 </div>
             </div>
         </div>

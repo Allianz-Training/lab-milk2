@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { CartService } from '../cart.service';
 import { UserService } from '../user.service';
 
 
@@ -9,12 +12,18 @@ import { UserService } from '../user.service';
   styleUrls: ['./cart-order.component.css']
 })
 export class CartOrderComponent implements OnInit {
-  products: [] 
+  products
   petname: any
+  form: FormGroup
+  @Input()
+  productcart
 
-  constructor(private api : ApiService, private userService: UserService) {
+  constructor(private api : ApiService, private userService: UserService, private fb: FormBuilder, private router: Router, private cart: CartService) {
     this.products = []
     this.petname = []
+    this.form = fb.group({
+      petId: ['']
+    })
   }
 
   ngOnInit(): void {
@@ -28,15 +37,12 @@ export class CartOrderComponent implements OnInit {
     this.api.get(`users/${this.userService.getUser().id}/pet`, headers ).subscribe(res => this.petname = res , error => console.log(error));
   }
 
-  delete(): void {
-
+  submit() {
+    const productcart = this.productcart
+    this.cart.getCart().push({ productId: this.products[0].id, petId: this.form.get('petId').value })
+    this.router.navigate(['/payrate'], {state: productcart })
   }
-
-
-    // this.products = history.state.data
-    // console.log(history.state)
-    // console.log(this.productcart)
-    // console.log(this.router.getCurrentNavigation().extras.state)
-  }
+  
+}
 
 

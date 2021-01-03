@@ -6,16 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ordersum.component.css']
 })
 export class OrdersumComponent implements OnInit {
-  products: []
+  products: any[]
   total: number
 
   constructor() { 
     this.products = []
+    this.total = 0
   }
 
   ngOnInit(): void {
     this.products = history.state.data
-   
+    // this.total = this.products.map(p => p)
+    const tmp: number[] = this.products.map(p => p['price'])
+    this.total = tmp.reduce((a , b) => a + b)
   }
 
 }

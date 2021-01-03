@@ -22,8 +22,7 @@ export class OurproductComponent implements OnInit {
     })
   }
 
-  buy(productId: string): void {
-    // console.log(this.products.filter(p => p.id === productId)[0])
+  buy(): void {
     if(this.userService.getToken()) {
       this.router.navigate(['/cart'])
     } else {

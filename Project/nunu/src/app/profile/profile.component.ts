@@ -17,9 +17,6 @@ export class ProfileComponent implements OnInit {
     this.token = this.userService.getToken()
   }
 
-  ngOnInit(): void {
-    console.log(this.user)
-    console.log(this.token)
-  }
+  ngOnInit(): void {}
 
 }

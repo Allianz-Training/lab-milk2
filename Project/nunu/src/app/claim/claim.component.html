@@ -9,31 +9,26 @@
       <label for="exampleInputEmail1" class="form-label">Pet's name</label>
       <select class="form-select" aria-label="Default select example">
         <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option *ngFor="let petname of petnames" value="{{ petname.id }}" >{{petname.name}}</option>
       </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Product's name</label>
         <select class="form-select" aria-label="Default select example">
           <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option *ngFor="let product of products" value="{{product.productDetails.id}}" >{{product.productDetails.name}}</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Type of your claim</label>
         <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">OPD</option>
-          <option value="2">Accident</option>
+          <option value="OPD" selected>OPD</option>
+          <option value="ACCIDENT">Accident</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Amount (Baht) </label>
-        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+        <input class="form-control" type="text" aria-label="default input example">
     </div>
     <button type="submit" class="btn btn-warning" [routerLink]="['/thank']" >Submit</button>
   </form>

@@ -33,13 +33,13 @@
 
       <hr>
       <div class="total" >
-        <p><b>Total :</b> <span *ngFor="let product of products">{{product.price}}</span> </p>
+        <p><b>Total price : </b> <span>{{ total }}</span> </p>
       </div>
       
 </div>
 
 <div id="checkout">
-    <button type="button" class="btn btn-warning" id="textbut" [routerLink]="['/payrate']">Checkout</button>
+    <button type="button" class="btn btn-warning" id="textbut" [routerLink]="['/payrate'] " [state]="{data: products}">Checkout</button>
 </div>
 
 
