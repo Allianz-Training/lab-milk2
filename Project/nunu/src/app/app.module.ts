@@ -36,6 +36,7 @@ import { BuytologinComponent } from './buytologin/buytologin.component';
 import { ClaimComponent } from './claim/claim.component';
 import { ThankComponent } from './thank/thank.component';
 import { AddpetComponent } from './addpet/addpet.component';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 
 
 @NgModule({
@@ -72,7 +73,6 @@ import { AddpetComponent } from './addpet/addpet.component';
     ClaimComponent,
     ThankComponent,
     AddpetComponent
-    
   ],
   imports: [
     BrowserModule,

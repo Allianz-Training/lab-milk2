@@ -1,4 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ApiService } from '../api.service';
+import { UserService } from '../user.service';
 
 import { CartOrderComponent } from './cart-order.component';
 
@@ -8,7 +11,11 @@ describe('CartOrderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CartOrderComponent ]
+      imports : [HttpClientModule],
+      declarations: [ CartOrderComponent ],
+      providers : [
+        { provide : ApiService , useValue : {}} , { provide:UserService , useValue: {}}
+      ]
     })
     .compileComponents();
   });
