@@ -14,6 +14,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.productcart = history.state.data
+    console.log('cart ',this.productcart)
   }
 
 }

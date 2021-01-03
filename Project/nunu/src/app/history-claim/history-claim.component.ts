@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { UserService } from '../user.service';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-history-claim',
@@ -12,7 +11,7 @@ export class HistoryClaimComponent implements OnInit {
 
   claims: any
 
-  constructor(private api: ApiService, private userService: UserService, private api1: HttpClient) { 
+  constructor(private api: ApiService, private userService: UserService) { 
     this.claims = []
   }
 

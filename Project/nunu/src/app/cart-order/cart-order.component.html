@@ -10,8 +10,7 @@
         <div>
           <form [formGroup]="form">
             <select class="form-select" formControlName="petId">
-              <option selected> Select pet </option>
-              <option *ngFor="let pname of petname; let i = index" value="{{pname.id}}">{{pname.name}}</option>
+              <option *ngFor="let pname of petname; let i = index" value="{{pname.id}}" selected>{{pname.name}}</option>
             </select>
           </form>
         </div >
