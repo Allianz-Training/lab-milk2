@@ -23,11 +23,6 @@ describe('AddpetComponent', () => {
     fixture.detectChanges();
   });
 
-  it('form invalid when empty', () => {
-    expect(component.registerForm.valid).toBeFalsy();
-  });
-
-
   // it('form invalid when empty',()=>{
   //   component.registerForm.controls.petName.setValue('');
   //   component.registerForm.controls.petAge.setValue('');
