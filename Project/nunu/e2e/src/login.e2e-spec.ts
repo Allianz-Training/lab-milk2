@@ -27,6 +27,28 @@ describe('Login test',()=>{
         expect(browser.getCurrentUrl()).toBe(browser.get('/profile'))
     });
 
+    it('wrong password', () => {
+        page.navigateTo();
+        page.getEmailTextBox().sendKeys('User1');
+        page.getPasswordTextBox().sendKeys('1234567');
+        page.getLoginButton().click();
+        expect(browser.getCurrentUrl()).not.toContain('profile');
+      });
+      it('wrong username', () => {
+        page.navigateTo();
+        page.getEmailTextBox().sendKeys('User2');
+        page.getPasswordTextBox().sendKeys('45632');
+        page.getLoginButton().click();
+        expect(browser.getCurrentUrl()).not.toContain('profile');
+      });
+      it('username and password are correct', () => {
+        page.navigateTo();
+        page.getEmailTextBox().sendKeys('User3');
+        page.getPasswordTextBox().sendKeys('45632');
+        page.getLoginButton().click();
+        expect(browser.getCurrentUrl()).toContain('Profile');
+      });
+
     // xit('form invalid when empty',()=>{
     
     // });

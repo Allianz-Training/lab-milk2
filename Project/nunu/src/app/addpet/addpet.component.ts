@@ -37,5 +37,4 @@ export class AddpetComponent implements OnInit {
       } , error => alert(error))
     } else alert('Please fill form')
   }
-
 }
